@@ -28,3 +28,5 @@ As shown in the figure, the neural network is decomposed and stored recursively 
 # Limitation 
 
 Currently, our software only supports neural network modules defined in <code>PyTorch</code>. The future version will support a more flexible way of neural network definitions. For singular value computation, the <code>PyTorch</code> built-in method is used. The problem is that this build-in method only works for the neural network with a small dimension of intermediate features. The computation will run out of computational resources for more advanced large models. Our current version only provides an alternative approximation method that yields the upper bound for the maximum singular value. A more efficient method will be considered in the future.
+
+-- Zheng Wang & Wenjie Ruan
