@@ -1,8 +1,5 @@
 # Understanding Adversarial Robustness of ViT via Cauchy Problem 
 
-In this repository we release models from the papers
-
-- [Understanding Adversarial Robustness of Vision Transformers via Cauchy Problem](https://arxiv.org/abs/2208.00906)
 
 ![avatar](./doc/pics/illustration_theory.png)
 At a high level, it has been proved that the intermediate feature of the neural network model with residual addition structure, e.g., ResNet, ViT, can be approximated by the solution of its underlying ODE, the blue and yellow dash line in the figure above Therefore the difference between the original and perturbed input image can be approximated by the difference in the solution of their corresponding ODEs, which is dominated by the maximum singular value of the Jacobian matrix of each basic block w.r.t. their inputs. To investigate the adversarial robustness of ViTs, this code is to
@@ -29,8 +26,3 @@ As shown in the figure, the neural network is decomposed and stored recursively 
 
 Currently, our software only supports neural network modules defined in <code>PyTorch</code>. The future version will support a more flexible way of neural network definitions. For singular value computation, the <code>PyTorch</code> built-in method is used. The problem is that this build-in method only works for the neural network with a small dimension of intermediate features. The computation will run out of computational resources for more advanced large models. Our current version only provides an alternative approximation method that yields the upper bound for the maximum singular value. A more efficient method will be considered in the future.
 
-##
-
-### Note: This work is accepted by ECML/PKDD 2022. Pls find the paper here: [Understanding Adversarial Robustness of ViT via Cauchy Problem](https://2022.ecmlpkdd.org/wp-content/uploads/2022/09/sub_795.pdf)
-
--- Zheng Wang & Wenjie Ruan
